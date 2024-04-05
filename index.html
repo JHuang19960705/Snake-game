@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>貪食蛇遊戲</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/rps.css" />
+  <link rel="stylesheet" href="./styles/snake.css" />
+</head>
+
+<body>
+  <div class="game-wrap">
+    <div class="snake-wrap">
+      <canvas id="myCanvas" width="320" height="320" style="background-color: black"></canvas>
+      <div>
+        <p id="myScore"></p>
+        <p id="myScore2"></p>
+      </div>
+      <button type="button" id="Start" onclick="location.reload()">
+        開始新遊戲
+      </button>
+    </div>
+    <div class="rps">
+      <p class="title">猜拳復活</p>
+      <div class="move-wrap">
+        <button class="move-button js-move-button" data-play-move="Rock"><img src="./img/rock-emoji.png" alt=""
+            class="move-icon"></button>
+        <button class="move-button js-move-button" data-play-move="Paper"><img src="./img/paper-emoji.png" alt=""
+            class="move-icon"></button>
+        <button class="move-button js-move-button" data-play-move="Scissors"><img src="./img/scissors-emoji.png" alt=""
+            class="move-icon"></button>
+      </div>
+      <div class="result-wrap">
+        <p class="js-result result"></p>
+        <p class="js-move"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="./scripts/snake.js"></script>
+  <script type="module" src="./scripts/rps.js"></script>
+</body>
+
+</html>
